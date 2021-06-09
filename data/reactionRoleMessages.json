@@ -9,6 +9,11 @@
             "name": "vaccinationType_1",
             "type": "vaccinationType",
             "message_id": "852208827079458886"
+        },
+        {
+            "name": "vaccinationType_1",
+            "type": "vaccinationType",
+            "message_id": "852311633602805800"
         }
     ]
 }
