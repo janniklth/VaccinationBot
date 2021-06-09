@@ -1,0 +1,14 @@
+{
+    "reaction_msgs": [
+        {
+            "name": "vaccinationType_1",
+            "type": "vaccinationType",
+            "message_id": "852208723766280202"
+        },
+        {
+            "name": "vaccinationType_1",
+            "type": "vaccinationType",
+            "message_id": "852208827079458886"
+        }
+    ]
+}
