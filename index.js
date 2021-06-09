@@ -1,9 +1,11 @@
 const { Client, MessageEmbed } = require('discord.js');
 const config = require('./config');
+const token_config = require('./token')
 const { web } = require('./help');
 const commands = require('./help');
 const webscraper = require('./webscraper');
 const adminHandler = require('./admin_handler');
+const token = require('./token');
 
 let bot = new Client({
     fetchAllMembers: false, // Remove this if the bot is in large guilds or set it to false.
@@ -109,4 +111,4 @@ bot.on('message', async message => {
 
 require('./server')();
 //bot.login(config.token);
-bot.login('ODUxMDU1NTA1Njg1NDc5NDM1.YLytNA.hGwgiQVB0bSAtOY7V3JjqPj-Xhw');
+bot.login(token.token);
