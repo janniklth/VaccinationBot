@@ -8,7 +8,7 @@ module.exports = {
     // sends selection mesaage/embed for vaccination type
     send_vaccionationType: async function(message, client) {
         //test 
-        console.log(typeof(reactionMessages.reaction_msgs[1].message_id));
+        //console.log(typeof(reactionMessages.reaction_msgs[1].message_id));
 
         // create embed
         var embed = new MessageEmbed()
@@ -24,7 +24,7 @@ module.exports = {
         await sendedEmbed.react('4️⃣');
 
         // save embed to .json
-        var toSave = { name: "vaccinationType_1", type: "vaccinationType", message_id: sendedEmbed.id }
+        var toSave = { type: "vaccinationType", id: "1", message_id: sendedEmbed.id }
         reactionMessages.reaction_msgs.push(toSave);
         fs.writeFileSync('./data/reactionRoleMessages.json', JSON.stringify(reactionMessages, null, 4));
     },

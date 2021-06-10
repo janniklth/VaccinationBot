@@ -1,54 +1,9 @@
 {
     "reaction_msgs": [
         {
-            "name": "vaccinationType_1",
             "type": "vaccinationType",
-            "message_id": "852208723766280202"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852208827079458886"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852311633602805800"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852329889650835476"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852329990958612531"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852330130700238859"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852330875576254524"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852330917317050418"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852335982137442314"
-        },
-        {
-            "name": "vaccinationType_1",
-            "type": "vaccinationType",
-            "message_id": "852566452338557049"
+            "id": "1",
+            "message_id": "852587329809416193"
         }
     ]
 }

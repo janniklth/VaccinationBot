@@ -7,7 +7,7 @@ const webscraper = require('./webscraper');
 const adminHandler = require('./admin_handler');
 const token = require('./token');
 const fs = require('fs');
-const reactionMessages = JSON.parse(fs.readFileSync('./data/reactionRoleMessages.json', 'utf-8'));
+
 
 let bot = new Client({
     fetchAllMembers: false, // Remove this if the bot is in large guilds or set it to false.
@@ -115,6 +115,8 @@ bot.on('message', async message => {
 bot.on('messageReactionAdd', async (reaction, user) => {
     console.log("Reaction added.")
 
+    const reactionMessages = JSON.parse(fs.readFileSync('./data/reactionRoleMessages.json', 'utf-8'));
+
     if (reaction.message.partial) await reaction.message.fetch();
     if (reaction.partial) await reaction.fetch(); 
     if (user.bot) return;
@@ -125,12 +127,15 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     for (let index = 0; index < reactionMessages.reaction_msgs.length; index++) {
         if (reactionMessages.reaction_msgs[index].message_id == reaction.message.id) {
             console.log("Reaction accepted.");
+            break;
         }
     }
 })
 
 bot.on('messageReactionRemove', async (reaction, user) => {
     console.log("Reaction removed.")
+
+    const reactionMessages = JSON.parse(fs.readFileSync('./data/reactionRoleMessages.json', 'utf-8'));
 
     if (reaction.message.partial) await reaction.message.fetch();
     if (reaction.partial) await reaction.fetch(); 
@@ -142,6 +147,7 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     for (let index = 0; index < reactionMessages.reaction_msgs.length; index++) {
         if (reactionMessages.reaction_msgs[index].message_id == reaction.message.id) {
             console.log("Reaction Remove accepted.");
+            break;
         }
     }
 })
