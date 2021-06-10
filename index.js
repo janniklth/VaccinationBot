@@ -6,6 +6,8 @@ const commands = require('./help');
 const webscraper = require('./webscraper');
 const adminHandler = require('./admin_handler');
 const token = require('./token');
+const fs = require('fs');
+const reactionMessages = JSON.parse(fs.readFileSync('./data/reactionRoleMessages.json', 'utf-8'));
 
 let bot = new Client({
     fetchAllMembers: false, // Remove this if the bot is in large guilds or set it to false.
@@ -15,7 +17,8 @@ let bot = new Client({
             name: `${config.prefix}help and impfsuche.de`,
             type: 'LISTENING'
         }
-    }
+    },
+    partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 });
 
 
@@ -108,6 +111,23 @@ bot.on('message', async message => {
     }
   }
 });
+
+bot.on('messageReactionAdd', async (reaction, user) => {
+    console.log("Reaction added.")
+
+    if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.partial) await reaction.fetch(); 
+    if (user.bot) return;
+    if (!reaction.message.guild) return; 
+
+    console.log("Reaction added and fetched.")
+
+    for (let index = 0; index < reactionMessages.reaction_msgs.length; index++) {
+        if (reactionMessages.reaction_msgs[index].message_id == reaction.message.id) {
+            console.log("Reaction accepted.");
+        }
+    }
+})
 
 require('./server')();
 //bot.login(config.token);

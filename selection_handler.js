@@ -7,6 +7,8 @@ module.exports = {
 
     // sends selection mesaage/embed for vaccination type
     send_vaccionationType: async function(message, client) {
+        //test 
+        console.log(typeof(reactionMessages.reaction_msgs[1].message_id));
 
         // create embed
         var embed = new MessageEmbed()
