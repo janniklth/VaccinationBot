@@ -1,4 +1,4 @@
-const config = require('./config');
+const config = require('./configs/config');
 const selectionHandler = require('./selection_handler');
 
 module.exports = {

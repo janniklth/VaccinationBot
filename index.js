@@ -1,5 +1,5 @@
 const { Client, MessageEmbed } = require('discord.js');
-const config = require('./config');
+const config = require('./configs/config');
 const token_config = require('./token')
 const { web } = require('./help');
 const commands = require('./help');

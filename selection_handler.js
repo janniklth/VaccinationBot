@@ -1,5 +1,5 @@
 const { Client, MessageEmbed, DiscordAPIError, MessageReaction } = require('discord.js');
-const config = require('./config');
+const config = require('./configs/config');
 const fs = require('fs');
 const reactionMessages = JSON.parse(fs.readFileSync('./data/reactionRoleMessages.json', 'utf-8'));
 
