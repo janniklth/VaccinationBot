@@ -1,7 +1,9 @@
 const { Client, MessageEmbed, DiscordAPIError, MessageReaction } = require('discord.js');
 const config = require('./configs/config');
 const fs = require('fs');
+const reactionRoles = require('./configs/reactionRoles');
 const reactionMessages = JSON.parse(fs.readFileSync('./data/reactionRoleMessages.json', 'utf-8'));
+
 
 module.exports = {
 
@@ -35,11 +37,25 @@ module.exports = {
 
     },
 
-    role_add: async function(message, client) {
-
+    role_add: async function(reaction, user, message) {
+        for (let index = 0; index < reactionRoles.reactionRoles.length; index++) {
+            let actual_reactionRole = reactionRoles.reactionRoles[index];
+            if (message.type == actual_reactionRole.type && message.id == actual_reactionRole.id && reaction.emoji.name == actual_reactionRole.emoji) {
+                let role_to_add = reaction.message.guild.roles.cache.find(role => role.id === actual_reactionRole.role_id);
+                await reaction.message.guild.members.cache.get(user.id).roles.add(role_to_add);
+                break;
+            }
+        }
     },
 
-    role_remove: async function(message, client) {
-
+    role_remove: async function(reaction, user, message) {
+        for (let index = 0; index < reactionRoles.reactionRoles.length; index++) {
+            let actual_reactionRole = reactionRoles.reactionRoles[index];
+            if (message.type == actual_reactionRole.type && message.id == actual_reactionRole.id && reaction.emoji.name == actual_reactionRole.emoji) {
+                let role_to_add = reaction.message.guild.roles.cache.find(role => role.id === actual_reactionRole.role_id);
+                await reaction.message.guild.members.cache.get(user.id).roles.remove(role_to_add);
+                break;
+            }
+        }
     }
 }

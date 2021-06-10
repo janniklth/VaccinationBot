@@ -5,6 +5,7 @@ const { web } = require('./help');
 const commands = require('./help');
 const webscraper = require('./webscraper');
 const adminHandler = require('./admin_handler');
+const roleHandler = require('./role_handler');
 const token = require('./token');
 const fs = require('fs');
 
@@ -127,6 +128,8 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     for (let index = 0; index < reactionMessages.reaction_msgs.length; index++) {
         if (reactionMessages.reaction_msgs[index].message_id == reaction.message.id) {
             console.log("Reaction accepted.");
+            roleHandler.role_add(reaction, user, reactionMessages.reaction_msgs[index]);
+            console.log("Role accepted.");
             break;
         }
     }
@@ -147,6 +150,8 @@ bot.on('messageReactionRemove', async (reaction, user) => {
     for (let index = 0; index < reactionMessages.reaction_msgs.length; index++) {
         if (reactionMessages.reaction_msgs[index].message_id == reaction.message.id) {
             console.log("Reaction Remove accepted.");
+            roleHandler.role_remove(reaction, user, reactionMessages.reaction_msgs[index]);
+            console.log("Role removed")
             break;
         }
     }

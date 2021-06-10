@@ -4,6 +4,31 @@
             "type": "vaccinationType",
             "id": "1",
             "message_id": "852587329809416193"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "852603627087593593"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "852604940022317097"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "852613969251663882"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "852623409527259166"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "852623847416266812"
         }
     ]
 }
