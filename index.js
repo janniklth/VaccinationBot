@@ -129,6 +129,23 @@ bot.on('messageReactionAdd', async (reaction, user) => {
     }
 })
 
+bot.on('messageReactionRemove', async (reaction, user) => {
+    console.log("Reaction removed.")
+
+    if (reaction.message.partial) await reaction.message.fetch();
+    if (reaction.partial) await reaction.fetch(); 
+    if (user.bot) return;
+    if (!reaction.message.guild) return; 
+
+    console.log("Reaction removed and fetched.")
+
+    for (let index = 0; index < reactionMessages.reaction_msgs.length; index++) {
+        if (reactionMessages.reaction_msgs[index].message_id == reaction.message.id) {
+            console.log("Reaction Remove accepted.");
+        }
+    }
+})
+
 require('./server')();
 //bot.login(config.token);
 bot.login(token.token);

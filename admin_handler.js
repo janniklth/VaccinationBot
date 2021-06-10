@@ -1,5 +1,5 @@
 const config = require('./configs/config');
-const selectionHandler = require('./selection_handler');
+const roleHandler = require('./role_handler');
 
 module.exports = {
     execute_admin_commands: async function(client, message, args) {
@@ -37,7 +37,7 @@ module.exports = {
                         switch (args[2]) {
                             // vaccinationType
                             case "vaccinationType":
-                                selectionHandler.send_vaccionationType(message, client);
+                                roleHandler.send_vaccionationType(message, client);
                                 break;
 
                                 // vaccinationPlace
