@@ -11,7 +11,7 @@ const fs = require('fs');
 
 
 let bot = new Client({
-    fetchAllMembers: false, // Remove this if the bot is in large guilds or set it to false.
+    fetchAllMembers: true, // Remove this if the bot is in large guilds or set it to false.
     presence: {
         status: 'online',
         activity: {

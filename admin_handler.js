@@ -52,10 +52,10 @@ module.exports = {
                         break;
 
                     case "dm_role":
-                        memberCache = client.guilds.cache.get('289889834170843136').members.cache;
-                        memberCache.each(member => {
-                            console.log(member.user.username);
-                        })
+                        let actual_guild = client.guilds.cache.get('289889834170843136');
+                        actual_guild.members.cache.forEach(member => {
+                            console.log(" => " + member.user.username);
+                        });
 
 
                         break;
