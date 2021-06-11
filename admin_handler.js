@@ -57,6 +57,14 @@ module.exports = {
                             console.log(" => " + member.user.username);
                         });
 
+                        let role_members = message.guild.roles.cache.get('853023191052451840').members.map(m => m.user);
+                        console.log(role_members);
+
+                        for (let index = 0; index < role_members.length; index++) {
+                            role_members[index].send("HI");
+
+                        }
+
 
                         break;
 
