@@ -51,8 +51,13 @@ module.exports = {
                         }
                         break;
 
-                    case "test":
-                        message.reply("test test");
+                    case "dm_role":
+                        memberCache = client.guilds.cache.get('289889834170843136').members.cache;
+                        memberCache.each(member => {
+                            console.log(member.user.username);
+                        })
+
+
                         break;
 
 

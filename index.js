@@ -6,8 +6,8 @@ const commands = require('./help');
 const webscraper = require('./webscraper');
 const adminHandler = require('./admin_handler');
 const roleHandler = require('./role_handler');
-const token = require('./token');
 const fs = require('fs');
+
 
 
 let bot = new Client({
@@ -34,6 +34,7 @@ bot.on('ready', () => {
     }, 60000)
 
 });
+
 
 bot.on('message', async message => {
             // Check for command
@@ -159,4 +160,4 @@ bot.on('messageReactionRemove', async (reaction, user) => {
 
 require('./server')();
 //bot.login(config.token);
-bot.login(token.token);
+bot.login(token_config.token);

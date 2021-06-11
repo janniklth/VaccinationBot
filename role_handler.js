@@ -57,5 +57,9 @@ module.exports = {
                 break;
             }
         }
+    },
+
+    role_message_embed: async function() {
+
     }
 }
