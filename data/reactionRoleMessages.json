@@ -44,6 +44,21 @@
             "type": "vaccinationType",
             "id": "1",
             "message_id": "853307833377751051"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "853327258277904395"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "853350385233952810"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "853351067139309571"
         }
     ]
 }
