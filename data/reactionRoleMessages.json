@@ -34,6 +34,11 @@
             "type": "vaccinationType",
             "id": "1",
             "message_id": "853024690644451379"
+        },
+        {
+            "type": "vaccinationType",
+            "id": "1",
+            "message_id": "853214666880188427"
         }
     ]
 }
