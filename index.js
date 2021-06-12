@@ -26,11 +26,11 @@ let bot = new Client({
 bot.on('ready', () => {
 
     console.log(`Logged in as ${bot.user.tag}.`)
-    bot.channels.cache.get(`851054960753508393`).send(`Hey, i'm online!`)
+    bot.channels.cache.get(`853228415976996902`).send(`Hey, i'm online!`)
 
     setInterval(async testfunction => {
         var vaccinations = await webscraper.test_func();
-        bot.channels.cache.get(`851054960753508393`).send(vaccinations)
+        bot.channels.cache.get(`853228415976996902`).send(vaccinations)
     }, 60000)
 
 });
@@ -60,7 +60,7 @@ bot.on('message', async message => {
 
                     case 'web':
                         var testtext = await webscraper.test_func();
-                        bot.channels.cache.get(`851054960753508393`).send(testtext);
+                        bot.channels.cache.get(`853228415976996902`).send(testtext);
                         break;
 
                     case 'dm':
