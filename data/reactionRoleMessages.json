@@ -3,62 +3,27 @@
         {
             "type": "vaccinationType",
             "id": "1",
-            "message_id": "852587329809416193"
+            "message_id": "853658230333112350"
         },
         {
             "type": "vaccinationType",
             "id": "1",
-            "message_id": "852603627087593593"
+            "message_id": "853658777386876938"
         },
         {
             "type": "vaccinationType",
             "id": "1",
-            "message_id": "852604940022317097"
+            "message_id": "853659646430543872"
         },
         {
             "type": "vaccinationType",
             "id": "1",
-            "message_id": "852613969251663882"
+            "message_id": "853662434937929728"
         },
         {
             "type": "vaccinationType",
             "id": "1",
-            "message_id": "852623409527259166"
-        },
-        {
-            "type": "vaccinationType",
-            "id": "1",
-            "message_id": "852623847416266812"
-        },
-        {
-            "type": "vaccinationType",
-            "id": "1",
-            "message_id": "853024690644451379"
-        },
-        {
-            "type": "vaccinationType",
-            "id": "1",
-            "message_id": "853214666880188427"
-        },
-        {
-            "type": "vaccinationType",
-            "id": "1",
-            "message_id": "853307833377751051"
-        },
-        {
-            "type": "vaccinationType",
-            "id": "1",
-            "message_id": "853327258277904395"
-        },
-        {
-            "type": "vaccinationType",
-            "id": "1",
-            "message_id": "853350385233952810"
-        },
-        {
-            "type": "vaccinationType",
-            "id": "1",
-            "message_id": "853351067139309571"
+            "message_id": "853668541206495232"
         }
     ]
 }

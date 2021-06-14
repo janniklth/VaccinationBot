@@ -16,6 +16,7 @@ module.exports = {
         var embed = new MessageEmbed()
             .setTitle("Impfstoff auswählen!")
             .setDescription('Klicke auf die Zahlen um die Benachrichtigung für den jeweiligen Impfstoff einzustellen!')
+            .addField("Impfstoff auswählen! \n", "1️⃣ -> BionTec/Pfizer \n 2️⃣ - > Moderna ")
             .setColor('BLUE');
 
         // send embed and add reactions
