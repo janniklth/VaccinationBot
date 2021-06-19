@@ -2,6 +2,7 @@ const { Client, MessageEmbed, DiscordAPIError, MessageReaction } = require('disc
 const config = require('./configs/config');
 const fs = require('fs');
 const reactionRoles = require('./configs/reactionRoles');
+const embedMessages = require('./embed_messages');
 const reactionMessages = JSON.parse(fs.readFileSync('./data/reactionRoleMessages.json', 'utf-8'));
 
 
@@ -20,7 +21,8 @@ module.exports = {
             .setColor('BLUE');
 
         // send embed and add reactions
-        var sendedEmbed = await message.channel.send(embed);
+        // var sendedEmbed = await message.channel.send(embed);
+        var sendedEmbed = await message.channel.send(embedMessages.lol);
         await sendedEmbed.react('1️⃣');
         await sendedEmbed.react('2️⃣');
         await sendedEmbed.react('3️⃣');
